@@ -1,0 +1,17 @@
+version: 2
+
+analyses:
+  - name: top_customers
+    description: >
+      Displays the top 10 customers with the highest total spending 
+      based on order data in the fact_sales table.
+
+  - name: top_products
+    description: >
+      Shows the top 10 products with the highest revenue and quantity sold 
+      joined from fact_sales and dim_products.
+
+  - name: sales_summary_by_month
+    description: >
+      Summarizes monthly sales metrics including order count, quantity sold, 
+      and total revenue from fact_sales.
