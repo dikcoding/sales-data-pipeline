@@ -1,0 +1,26 @@
+version: 2
+
+snapshots:
+  - name: cust_info_snapshot
+    description: >
+      Snapshot of customer information from the `bronze_crm_cust_info` model.
+      Tracks changes in customer attributes including first name, last name,
+      marital status, and gender using the `check` strategy.
+    columns:
+      - name: cst_id
+        description: Unique identifier for customer (snapshot key).
+        tests:
+          - not_null
+          - unique
+
+      - name: cst_firstname
+        description: Customer first name.
+
+      - name: cst_lastname
+        description: Customer last name.
+
+      - name: cst_marital_status
+        description: Customer marital status.
+
+      - name: cst_gndr
+        description: Customer gender.
